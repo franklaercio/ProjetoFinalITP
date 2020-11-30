@@ -35,7 +35,7 @@ Abaixo segue uma breve descrição do problema proposto:
 ### :mag_right: Como executar o projeto
 
 1. Clone este repositório <br/>
-`git clone https://github.com/franklaercio/titanic_machine_learning.git` <br/>
+`git clone https://github.com/franklaercio/ProjetoFinalITP.git` <br/>
 2. Vá no diretório que ele foi clonado e execute os comandos abaixo <br/>
 `gcc main.c methods.c -o main` e `./main` <br/>
 
