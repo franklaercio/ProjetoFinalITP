@@ -20,11 +20,9 @@
 ### :bookmark_tabs: Resumo do Projeto
 Abaixo segue uma breve descrição do problema proposto:
 
-> Modelos epidemiológicos computacionais (MEC) são utilizados para a compreensão da dinâmica de uma epidemia ou afim, e são, portanto, ferramentas essenciais na determinação de políticas públicas para combate e prevenção de doenças. <br/>
-A transmissão de uma doença infecciosa pode ocorrer por diversas formas, como contato direto entre indivíduos, por via aérea, por contato com superfícies contaminadas, via vetor de transmissão, dentre outros. <br/>
-Um MEC bastante utilizado é conhecido como Suscetível-Infectado-Removido (SIR).<br/>
+> <p style="text-align: justify;"> Modelos epidemiológicos computacionais (MEC) são utilizados para a compreensão da dinâmica de uma epidemia ou afim, e são, portanto, ferramentas essenciais na determinação de políticas públicas para combate e prevenção de doenças.  A transmissão de uma doença infecciosa pode ocorrer por diversas formas, como contato direto entre indivíduos, por via aérea, por contato com superfícies contaminadas, via vetor de transmissão, dentre outros. Um MEC bastante utilizado é conhecido como Suscetível-Infectado-Removido (SIR).</p>
 
-### :white_check_mark: Divisão das Tarefas do Checkpoint 1:
+### :heavy_check_mark: Divisão das Tarefas do Checkpoint 1:
 #### Frank:
 - Criar os arquivos inicias do projeto
 - Ler os dados de entrada
