@@ -43,10 +43,6 @@ Abaixo segue uma breve descrição do problema proposto:
 * **Frank Laércio** - [franklaercio](https://github.com/franklaercio)
 * **Ohanna Dezidério** - [ohannadeziderio](https://github.com/ohannadeziderio)
 
-### :clipboard: License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ### :newspaper: Palavras Chaves
 
 - C
