@@ -31,6 +31,8 @@ int main() {
 
     fscanf(input,"%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf\n", S0, I0, R0, h, N_b, T_b, S_b0, I_b0, m_k, n_k, T_k);
 
+    printf("Dados de entrada lidos com sucesso!\n");
+
     //Calculando as constantes
     double b = (*N_b)/((*T_b) * (*S_b0) * (*I_b0));
     double k = (*m_k)/((*n_k) * (*T_k));

@@ -22,13 +22,13 @@ void calcularSRI(double *S0, double *I0, double *R0, double *h, double b, double
     R[0] = *R0;    
     I[0] = *I0;
 
-    for (int t = 1; t < 5042; t++) {
+    for (int t = 1; t < 5041; t++) {
         S[t] = S[t-1] - ((*h) * b * (S[t-1]) * (I[t-1]));
         I[t] = I[t-1] + ((*h) * ((b * S[t-1] * I[t-1]) - (k * I[t-1])));
         R[t] = R[t-1] + ((*h) * k * I[t-1]); 
 
-        tempo[t] = tmp;      
         tmp += (*h); 
+        tempo[t] = tmp;      
     }
 
     preencherCSV(S, I, R, tempo);  
@@ -44,8 +44,11 @@ void preencherCSV(double *S, double *I, double *R, double *t) {
         exit(1);
     }
 
-    for(int i = 0; i < 5042; i++){
+    for(int i = 0; i < 5041; i++){
         fprintf(saida, "%f,%f,%f,%.1f\n", S[i], I[i], R[i], t[i]);
     }
+
+    printf("Arquivo output.csv com os dados do SRI criado com sucesso!\n");
+
     fclose(saida);
 }
