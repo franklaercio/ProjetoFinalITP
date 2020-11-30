@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-double* alocar_din_double(int tamanho);
+double* alocar_din(int tamanho);
 
-int* alocar_din_int(int tamanho);
+void calcularSRI(double *S0, double *I0, double *R0, double *h, double b, double k);
 
 #endif
