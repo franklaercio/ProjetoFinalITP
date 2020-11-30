@@ -35,6 +35,9 @@ int main() {
     double b = (*N_b)/((*T_b) * (*S_b0) * (*I_b0));
     double k = (*m_k)/((*n_k) * (*T_k));
 
+    //Calculando SIR
+    calcularSRI(S0, I0, R0, h, b, k);
+
     fclose(input);
 
     return 0;

@@ -1,4 +1,3 @@
-  
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -31,4 +30,22 @@ void calcularSRI(double *S0, double *I0, double *R0, double *h, double b, double
         tempo[t] = tmp;      
         tmp += (*h); 
     }
+
+    preencherCSV(S, I, R, tempo);  
+}
+
+
+void preencherCSV(double *S, double *I, double *R, double *t) {   
+    FILE *saida = fopen("output.csv", "w+");
+    
+    if(saida == NULL){
+        printf("ERRO! O arquivo não foi aberto!\n");
+
+        exit(1);
+    }
+
+    for(int i = 0; i < 5042; i++){
+        fprintf(saida, "%f,%f,%f,%.1f\n", S[i], I[i], R[i], t[i]);
+    }
+    fclose(saida);
 }
