@@ -35,8 +35,16 @@ int main() {
     double b = (N_b)/((T_b) * (S_b0) * (I_b0));
     double k = (m_k)/((n_k) * (T_k));
 
-    // Calculando SIR
+    // Calculando SIR - Cenário Zero
     cenarioZeroSRI(&S0, &I0, &R0, &h, b, k, 5042);
+
+    // Calculando SIR - Cenário Um
+    double b_AposControle = (N_b)/((T_b + 10) * (S_b0) * (I_b0));
+    cenarioUmSRI(&S0, &I0, &R0, &h, b, k, 5042, 40, b_AposControle);
+
+    // Calculando SIR - Cenário Dois
+    double k_AposControle = (m_k)/((n_k) * (T_k - 10));
+    cenarioDoisSRI(&S0, &I0, &R0, &h, b, k, 5042, 40, k_AposControle);
 
     fclose(input);
 

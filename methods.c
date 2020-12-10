@@ -56,6 +56,92 @@ void cenarioZeroSRI(double *S0, double *I0, double *R0, double *h, double b, dou
 }
 
 /**
+ *  Função responsável por calcular o cenário 1 proposto pelo desafio
+ *  
+ *  @param S0, I0, R0, h, b, k, tamanho, tempoPercepcao, b_AposControle	
+ *  @return
+*/
+void cenarioUmSRI(double *S0, double *I0, double *R0, double *h, double b, double k, int tamanho, int tempoPercepcao, double b_AposControle) {
+    double *S, *I, *R, *tempo, tmp = 0;
+
+    S   = (double*) malloc(tamanho * sizeof(double));
+    I   = (double*) malloc(tamanho * sizeof(double));   
+    R   = (double*) malloc(tamanho * sizeof(double));
+    tempo = (double*) malloc(tamanho * sizeof(double));
+
+    S[0] = *S0; 
+    R[0] = *R0;    
+    I[0] = *I0;
+
+    for (int t = 1; t < tamanho - 1; t++) {
+        if (t == tempoPercepcao) {
+            b = b_AposControle;
+        }
+
+        SRI modelo = calcularSRI(S, I, R, h, t, b, k);
+        
+        S[t] = modelo.S;
+        I[t] = modelo.I;
+        R[t] = modelo.R; 
+
+        tmp += (*h); 
+        tempo[t] = tmp;      
+    }
+
+    char nomeArquivo[256] = "cenarioUm.csv";
+
+    preencherCSV(S, I, R, tempo, nomeArquivo);
+
+    free (S);
+    free (R);
+    free (I);
+    free (tempo); 
+}
+
+/**
+ *  Função responsável por calcular o cenário 2 proposto pelo desafio
+ *  
+ *  @param S0, I0, R0, h, b, k, tamanho, tempoPercepcao, k_AposControle	
+ *  @return
+*/
+void cenarioDoisSRI(double *S0, double *I0, double *R0, double *h, double b, double k, int tamanho, int tempoPercepcao, double k_AposControle) {
+    double *S, *I, *R, *tempo, tmp = 0;
+
+    S   = (double*) malloc(tamanho * sizeof(double));
+    I   = (double*) malloc(tamanho * sizeof(double));   
+    R   = (double*) malloc(tamanho * sizeof(double));
+    tempo = (double*) malloc(tamanho * sizeof(double));
+
+    S[0] = *S0; 
+    R[0] = *R0;    
+    I[0] = *I0;
+
+    for (int t = 1; t < tamanho - 1; t++) {
+        if (t == tempoPercepcao) {
+            k = k_AposControle;
+        }
+
+        SRI modelo = calcularSRI(S, I, R, h, t, b, k);
+        
+        S[t] = modelo.S;
+        I[t] = modelo.I;
+        R[t] = modelo.R; 
+
+        tmp += (*h); 
+        tempo[t] = tmp;      
+    }
+
+    char nomeArquivo[256] = "cenarioDois.csv";
+
+    preencherCSV(S, I, R, tempo, nomeArquivo);
+
+    free (S);
+    free (R);
+    free (I);
+    free (tempo); 
+}
+
+/**
  *  Função responsável por calcular os seguintes valores:
  *  - Número de indivíduos sucetíveis
  *  - Número de indivíduos infectados
