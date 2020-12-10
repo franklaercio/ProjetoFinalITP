@@ -32,6 +32,14 @@ Abaixo segue uma breve descrição do problema proposto:
 - Exportar o resultado do SRI para CSV
 - Iniciar a documentação
 
+### :heavy_check_mark: Divisão das Tarefas do Checkpoint 2:
+#### Frank:
+- Fazer modificações apontadas pelo professor
+- Atualizar o README
+#### Ohanna:
+- Fazer a função que calcula os cenários 1 e 2
+- Exportar os gráficos
+
 ### :mag_right: Como executar o projeto
 
 1. Clone este repositório <br/>
